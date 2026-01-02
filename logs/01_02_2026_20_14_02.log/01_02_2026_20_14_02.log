@@ -1,0 +1,6 @@
+[ 2026-01-02 20:14:02,433 ] - root - INFO - Enter to the ETL pipeline
+[ 2026-01-02 20:14:02,433 ] - root - INFO - Take the data from the dataset...
+[ 2026-01-02 20:14:02,453 ] - root - INFO - Convert the data to the json format...
+[ 2026-01-02 20:14:03,886 ] - root - INFO - Enter to the ETL pipline Load part
+[ 2026-01-02 20:14:03,886 ] - root - INFO - Connect to the Mongo db
+[ 2026-01-02 20:14:13,323 ] - root - INFO - End the ETL pipeline
