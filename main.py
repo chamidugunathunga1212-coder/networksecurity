@@ -8,6 +8,8 @@ from netwoksecurity.components.data_validation import DataValidation
 from netwoksecurity.components.data_transformation import DataTransformation
 from netwoksecurity.entity.artifact_entity import DataTransformationArtifact
 
+from netwoksecurity.components.model_trainer import ModelTrainer
+from netwoksecurity.entity.config_entity import ModelTrainerConfig
 
 import sys
 
@@ -33,9 +35,24 @@ if __name__=='__main__':
 
         data_transformation_config = DataTransformationConfig(training_pipeline_config=train_pipeline_congig)
         data_transform = DataTransformation(data_validation_artifacts,data_transformation_config)
-        data_transform_artifacts= data_transform_artifacts = data_transform.initiate_data_transformation()
+        data_transform_artifacts = data_transform.initiate_data_transformation()
         print(data_transform_artifacts)
         logging.info("Data transformation is completed")
+
+
+        logging.info("Data taraining is started")
+
+        data_training_config = ModelTrainerConfig(training_pipeline_config=train_pipeline_congig)
+        model_trainer = ModelTrainer(data_training_config,data_transform_artifacts)
+        model_trainer_artifacts = model_trainer.initiate_model_trainer()
+        print(model_trainer_artifacts)
+
+
+
+        logging.info("Data training is completed")
+
+
+
 
 
 
