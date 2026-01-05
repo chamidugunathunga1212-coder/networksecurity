@@ -20,11 +20,11 @@ import numpy as np
 
 
 class DataTransformation:
-    def __init__(self,data_validation_artifacts:DataValidationArtifact,
+    def __init__(self,data_validation_artifact:DataValidationArtifact,
                  data_transformation_config:DataTransformationConfig):
         try:
             logging.info(f"{'>>'*20} Data Transformation {'<<'*20}")
-            self.data_validation_artifacts:DataValidationArtifact = data_validation_artifacts
+            self.data_validation_artifact:DataValidationArtifact = data_validation_artifact
             self.data_transformation_config:DataTransformationConfig = data_transformation_config
         except Exception as e:
             raise NetworkSecurityException(e,sys)
@@ -55,8 +55,8 @@ class DataTransformation:
         try:
             logging.info(f"Initiating data transformation")
             # load train and test file path
-            valid_train_df = DataTransformation.read_data(self.data_validation_artifacts.valid_train_file_path)
-            valid_test_df = DataTransformation.read_data(self.data_validation_artifacts.valid_test_file_path)
+            valid_train_df = DataTransformation.read_data(self.data_validation_artifact.valid_train_file_path)
+            valid_test_df = DataTransformation.read_data(self.data_validation_artifact.valid_test_file_path)
             logging.info(f"Loading training and testing data")
 
             ## training dataframe
@@ -98,6 +98,8 @@ class DataTransformation:
 
             # save preprocessing object
             save_object(self.data_transformation_config.transformed_object_file_path,preprocessing_obj)
+
+            save_object("final_model/preprocessor.pkl",preprocessing_obj)
 
             # prepare artifact
             data_transformation_artifact = DataTransformationArtifact(

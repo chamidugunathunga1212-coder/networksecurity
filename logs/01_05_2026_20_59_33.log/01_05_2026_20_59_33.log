@@ -1,0 +1,29 @@
+[ 2026-01-05 20:59:57,231 ] - root - INFO - Start data Ingestion
+[ 2026-01-05 21:00:06,687 ] - root - INFO - Performed train and test split on the dataframe
+[ 2026-01-05 21:00:06,858 ] - root - INFO - Expoted train and train file path
+[ 2026-01-05 21:00:06,904 ] - root - INFO - Expoted train and test file path
+[ 2026-01-05 21:00:06,906 ] - root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file='Artifcats\\01_05_2026_20_59_36\\data_ingestion\\ingested\\train.csv', test_file='Artifcats\\01_05_2026_20_59_36\\data_ingestion\\ingested\\test.csv')
+[ 2026-01-05 21:00:06,936 ] - root - INFO - Initiate the data Validation
+[ 2026-01-05 21:00:07,021 ] - root - INFO - Required number of columns: 2 
+[ 2026-01-05 21:00:07,029 ] - root - INFO - Dataframe has columns: 31
+[ 2026-01-05 21:00:07,030 ] - root - INFO - Required number of columns: 2 
+[ 2026-01-05 21:00:07,030 ] - root - INFO - Dataframe has columns: 31
+[ 2026-01-05 21:00:08,022 ] - root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Transformation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2026-01-05 21:00:08,023 ] - root - INFO - Initiating data transformation
+[ 2026-01-05 21:00:08,023 ] - root - INFO - Reading data from file: Artifcats\01_05_2026_20_59_36\data_ingestion\ingested\train.csv
+[ 2026-01-05 21:00:08,066 ] - root - INFO - Reading data from file: Artifcats\01_05_2026_20_59_36\data_ingestion\ingested\test.csv
+[ 2026-01-05 21:00:08,079 ] - root - INFO - Loading training and testing data
+[ 2026-01-05 21:00:08,085 ] - root - INFO - Obtaining preprocessing object
+[ 2026-01-05 21:00:08,085 ] - root - INFO - Creating data transformer object
+[ 2026-01-05 21:00:08,086 ] - root - INFO - Applying preprocessing object on training and testing data
+[ 2026-01-05 21:00:08,113 ] - root - INFO - Saving transformed training and testing arrays
+[ 2026-01-05 21:00:08,128 ] - root - INFO - Entered the save_object method of MainUtils class
+[ 2026-01-05 21:00:08,135 ] - root - INFO - Exited the save_object method of MainUtils class
+[ 2026-01-05 21:00:08,135 ] - root - INFO - Entered the save_object method of MainUtils class
+[ 2026-01-05 21:00:08,141 ] - root - INFO - Exited the save_object method of MainUtils class
+[ 2026-01-05 21:00:08,142 ] - root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_object_file_path='Artifcats\\01_05_2026_20_59_36\\data_transformation\\transformed_object\\preprocessing_object.pkl', transformed_train_file_path='Artifcats\\01_05_2026_20_59_36\\data_transformation\\transformed\\train.npy', transformed_test_file_path='Artifcats\\01_05_2026_20_59_36\\data_transformation\\transformed\\test.npy')
+[ 2026-01-05 21:05:58,643 ] - root - INFO - Entered the save_object method of MainUtils class
+[ 2026-01-05 21:05:58,671 ] - root - INFO - Exited the save_object method of MainUtils class
+[ 2026-01-05 21:05:58,671 ] - root - INFO - Entered the save_object method of MainUtils class
+[ 2026-01-05 21:05:58,708 ] - root - INFO - Exited the save_object method of MainUtils class
+[ 2026-01-05 21:05:58,708 ] - root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifcats\\01_05_2026_20_59_36\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9912743506493507, precision_score=0.9886662618903056, recall_score=0.9938962360122076), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9732961339178956, precision_score=0.9636937647987371, recall_score=0.9830917874396136))
